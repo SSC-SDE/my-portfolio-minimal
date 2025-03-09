@@ -12,9 +12,9 @@ const metrics = [
   },
   {
     id: 2,
-    value: "50+",
-    label: "Projects Delivered",
-    description: "From small applications to complex web platforms.",
+    value: "35+",
+    label: "Projects Served",
+    description: "From small applications to complex web platforms end-to-end.",
   },
   {
     id: 3,

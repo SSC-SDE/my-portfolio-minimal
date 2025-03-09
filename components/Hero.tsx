@@ -6,11 +6,11 @@ import {
   useMotionTemplate,
   useMotionValue,
 } from "framer-motion";
-import { useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi";
 import obj from "@/assets/obj1.png";
 import profilepic from "@/assets/profilepic.png";
 import Image from "next/image";
+import { useEffect } from "react";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -76,7 +76,9 @@ export const Hero = () => {
         <p className="my-6 max-w-xl text-center">
           Fullstack Developer based in Mumbai, with over 3 years of experience
         </p>
-        <motion.button
+        <motion.a
+          href="/Shankhya_Resume_DEV_2025.pdf"
+          download="Shankhya_Resume.pdf"
           style={{
             border,
             boxShadow,
@@ -89,8 +91,8 @@ export const Hero = () => {
           }}
           className="flex w-fit items-center gap-2 rounded-full px-4 py-2"
         >
-          Download CV <FiArrowRight className="" />
-        </motion.button>
+          Download CV <FiArrowRight />
+        </motion.a>
       </div>
 
       <div className="bg-circle-container">
