@@ -4,11 +4,11 @@
 // Import necessary components and libraries
 import Image from "next/image";
 import { motion } from "framer-motion";
-import udemy from "../assets/udemy.png";
-import fiverr from "../assets/fiverr.png";
-import elementor from "../assets/elementor.png";
-import logitech from "../assets/logitech.png";
-import oracle from "../assets/oracle.png";
+import udemy from "@/assets/udemy.png";
+import fiverr from "@/assets/fiverr.png";
+import elementor from "@/assets/elementor.png";
+import logitech from "@/assets/logitech.png";
+import oracle from "@/assets/oracle.png";
 
 const images = [
   { src: udemy, alt: "figma" },
