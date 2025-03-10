@@ -159,11 +159,14 @@ export const Hero = () => {
         </div>
 
         {/* Static Title */}
-        <p className="text-xl md:text-2xl mt-4 font-semibold max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text leading-tight text-transparent flex items-center">
+        {/* <p className="text-xl md:text-2xl mt-4 font-semibold max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text leading-tight text-transparent flex items-center">
           Computer Science and System Engineer
         </p>
         <p className="text-md md:text-sm py-4 font-semibold">
           based in Mumbai with 3+ years of experience in Software/IT Domain
+        </p> */}
+        <p className="my-6 max-w-xl text-center">
+          FullStack Developer based in Mumbai, with over 3 years of experience
         </p>
 
         <motion.a
