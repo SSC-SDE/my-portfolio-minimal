@@ -58,7 +58,12 @@ export const Portfolio = () => {
         <div>
           <h2 className="text-6xl font-bold mb-10">
             Demo <span className="text-purple-400">Projects</span>
+            <p className="text-md md:text-sm py-4 font-semibold">
+              {" "}
+              Removed links for Scrapers/Spammers for now will update again soon{" "}
+            </p>
           </h2>
+
           {projects.map((project) => (
             <div
               key={project.id}
