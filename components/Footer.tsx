@@ -9,7 +9,7 @@ const socialLinks = [
   },
   {
     id: 2,
-    href: "www.linkedin.com/in/shankhyachatterjee",
+    href: "https://www.linkedin.com/in/shankhyachatterjee",
     Icon: AiFillLinkedin,
     label: "LinkedIn",
   },
