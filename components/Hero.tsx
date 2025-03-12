@@ -10,7 +10,7 @@ import { FiArrowRight } from "react-icons/fi";
 import obj from "@/assets/obj1.png";
 import profilepic from "@/assets/profilepic.png";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -40,7 +40,6 @@ const titles = [
 
 export const Hero = () => {
   const color = useMotionValue(COLORS_TOP[0]);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
   const [currentTitleIndex, setCurrentTitleIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -84,12 +83,6 @@ export const Hero = () => {
     return () => clearTimeout(timer);
   }, [displayedText, isDeleting]);
 
-  const playPronunciation = () => {
-    if (audioRef.current) {
-      audioRef.current.play();
-    }
-  };
-
   // Motion Templates for consistent background styling
   const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%, #000 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
@@ -108,23 +101,6 @@ export const Hero = () => {
         </h1>
         <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text font-black leading-tight text-transparent text-5xl md:text-7xl flex items-center">
           Shankhya
-          <button
-            onClick={playPronunciation}
-            className="ml-2 text-gray-400 hover:text-white relative inline-flex items-center justify-center 
-             w-6 h-6 md:w-8 md:h-8 rounded-full transition duration-300"
-          >
-            <span
-              role="img"
-              aria-label="Pronounce"
-              className="text-sm md:text-base"
-            >
-              🔊
-            </span>
-            <span
-              className="absolute inset-0 rounded-full border border-transparent 
-               hover:border-white transition duration-300"
-            ></span>
-          </button>
         </h1>
 
         {/* Animated Title */}
@@ -134,7 +110,6 @@ export const Hero = () => {
         >
           {displayedText}
         </div>
-        <audio ref={audioRef} src="/shankhya-pronounciation.mp3" />
         <Image src={profilepic} alt="Profile picture of Shankhya" width={250} />
         <div className="flex bg-white/10 shadow-xl p-3 rounded-3xl justify-center items-center space-x-2 mb-4">
           <Image
