@@ -141,7 +141,7 @@ export const Hero = () => {
           based in Mumbai with 3+ years of experience in Software/IT Domain
         </p> */}
         <p className="my-6 max-w-xl text-center">
-          FullStack Developer based in Mumbai, with over 3 years of experience
+          Based in Mumbai, delivering excellence for 3+ years in Software/IT
         </p>
 
         <motion.a
