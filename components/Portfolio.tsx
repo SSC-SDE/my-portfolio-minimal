@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import proj1 from "@/assets/proj10.png";
 import proj2 from "@/assets/proj11.png";
+
 import {
   useMotionTemplate,
   useMotionValue,
@@ -14,17 +15,27 @@ import {
 const projects = [
   {
     id: 1,
-    year: 2024,
-    title: "My Chat App",
-    description: "uses Socket.io MERN to give real time chat",
+    year: 2025,
+    title: "Silkshopper",
+    description:
+      "Full Fledged E-Commerece platform leveraging MERN Stack, Redis, stripe integration with JWT Authentication",
     image: proj1,
   },
   {
-    id: 2,
-    year: 2024,
-    title: "My AI Consultant",
-    description: "uses OPEN AI, Nextjs and monorepo",
+    id: 3,
+    year: 2025,
+    title: "AI SAAS Platform",
+    description:
+      "Gen AI Platform using Open Api integration, Response Parsing, Nextjs , mongodb, JWT, and Token based premium features, deployed over a monorepo",
     image: proj2,
+  },
+  {
+    id: 2,
+    year: 2025,
+    title: "Cascades",
+    description:
+      "Real-Time Chat App which leverages Socket.io and MERN Stack with JWT Authentication",
+    image: proj1,
   },
 ];
 
@@ -57,10 +68,10 @@ export const Portfolio = () => {
       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12">
         <div>
           <h2 className="text-6xl font-bold mb-10">
-            Demo <span className="text-purple-400">Projects</span>
+            Full-Stack <span className="text-purple-400">Projects</span>
             <p className="text-sm sm:text-sm py-4 font-semibold">
               {" "}
-              Removed links for Scrapers/Spammers for now will update again soon{" "}
+              Removed links for Scrapers/Spammers as of now{" "}
             </p>
           </h2>
 
