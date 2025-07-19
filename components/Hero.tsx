@@ -141,12 +141,11 @@ export const Hero = () => {
           based in Mumbai with 3+ years of experience in Software/IT Domain
         </p> */}
         <p className="my-6 max-w-xl text-center">
-          Based in Mumbai, delivering excellence for 3+ years in Software/IT
+          Based in Mumbai, delivering excellence for 4+ years in Software/IT
         </p>
 
         <motion.a
-          href="/Shankhya_Resume_DEV_2025.pdf"
-          download="Shankhya_Resume.pdf"
+          href="#contact"
           style={{
             border,
             boxShadow,
@@ -155,7 +154,7 @@ export const Hero = () => {
           whileTap={{ scale: 0.985 }}
           className="flex w-fit items-center gap-2 mt-4 rounded-full px-4 py-2"
         >
-          Download CV <FiArrowRight />
+          Contact <FiArrowRight />
         </motion.a>
       </div>
 

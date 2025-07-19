@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
 
 export const Contact = () => {
   return (
@@ -23,46 +22,71 @@ export const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-7xl font-bold text-gray-300"
           >
-            Get in <span className="text-purple-500">touch</span>
+            Contact <span className="text-purple-500">Form</span>
           </motion.h2>
-          <motion.div
+          <motion.form
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
             className="glass p-8 rounded-2xl space-y-8"
+            action="https://formspree.io/f/mvgqgjvb" // Replace with your Formspree endpoint
+            method="POST"
           >
             <div className="space-y-2">
-              <p className="text-lg text-gray-300">Phone</p>
-              <a
-                href="tel: +91 8658359154"
-                className="text-2xl font-semibold hover:text-purple-400 transition duration-300 flex items-center gap-2"
-              >
-                +91 8658359154
-                <span className="text-gray-500">
-                  <i className="fas fa-arrow-up-right"></i>
-                </span>
-              </a>
+              <label htmlFor="name" className="text-lg text-gray-300">
+                Name
+              </label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required
+                className="w-full p-2 rounded bg-gray-800 text-white"
+              />
             </div>
             <div className="space-y-2">
-              <p className="text-lg text-gray-300">Email</p>
-              <a
-                href="mailto:shankhyasubhrac@outlook.com"
-                className="text-xl lg:text-2xl font-semibold hover:text-gray-400 transition duration-300 flex items-center gap-2"
-              >
-                shankhyasubhrac@outlook.com
-                <span className="text-gray-500">
-                  <ArrowUpRight className="text-gray-500" size={24} />
-                </span>
-              </a>
+              <label htmlFor="email" className="text-lg text-gray-300">
+                Email
+              </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                className="w-full p-2 rounded bg-gray-800 text-white"
+              />
             </div>
-
             <div className="space-y-2">
-              <p className="text-lg">Address</p>
-              <address className="text-xl not-italic leading-relaxed">
-                Mumbai, MH(Maharashtra), INDIA <br />
-              </address>
+              <label htmlFor="subject" className="text-lg text-gray-300">
+                Subject
+              </label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                required
+                className="w-full p-2 rounded bg-gray-800 text-white"
+              />
             </div>
-          </motion.div>
+            <div className="space-y-2">
+              <label htmlFor="message" className="text-lg text-gray-300">
+                Message
+              </label>
+              <textarea
+                name="message"
+                id="message"
+                required
+                rows={5}
+                className="w-full p-2 rounded bg-gray-800 text-white"
+              />
+            </div>
+            <button
+              type="submit"
+              className="bg-purple-500 text-white px-6 py-2 rounded-full font-bold hover:bg-purple-600 transition"
+            >
+              Send Message
+            </button>
+          </motion.form>
         </div>
         <motion.div
           initial={{ opacity: 0, x: 20 }}
